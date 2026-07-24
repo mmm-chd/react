@@ -19,8 +19,10 @@ const LoginPage = () => {
         <div className="absolute inset-0 bg-black/70 md:hidden" />
       </div>
 
-      {errors.general && (
-        <div className="mb-4 text-sm text-red-500 z-10">{errors.general}</div>
+      {errors?.general && (
+        <div className="mb-4 rounded-lg bg-red-100 p-3 text-xs text-red-600">
+          {errors.general}
+        </div>
       )}
 
       <div className="relative z-10 flex min-h-screen w-full items-center justify-center p-6 md:ml-auto md:w-1/2 md:p-12 md:bg-white">
@@ -31,11 +33,9 @@ const LoginPage = () => {
             className="w-full mb-6 h-28 object-contain"
           />
 
-          <h2 className="text-2xl font-medium text-white text-center md:text-gray-800 mb-8 ">
+          <h2 className="text-2xl font-medium text-white text-center md:text-gray-800 mb-20 ">
             Selamat Datang Kembali!
           </h2>
-
-          <div className="m-12"></div>
 
           <form className="space-y-4" onSubmit={handleSubmit}>
             <div>
@@ -74,13 +74,10 @@ const LoginPage = () => {
               )}
             </div>
 
-            <div className="m-8"></div>
-
-            <p className="w-full h-min underline font-medium text-xs text-end cursor-pointer mb-10 text-white md:text-gray-700">
+            <p className="w-full h-min underline font-medium text-xs text-end cursor-pointer mb-20 text-white md:text-gray-700 ">
               Lupa Password?
             </p>
 
-            <div className="m-12"></div>
             <Button type="submit" loading={loading} text="Masuk" />
 
             <p className="text-center text-xs font-medium">
