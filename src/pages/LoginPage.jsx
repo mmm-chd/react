@@ -78,7 +78,7 @@ const LoginPage = () => {
               Lupa Password?
             </p>
 
-            <Button type="submit" loading={loading} text="Masuk" />
+            <Button type="submit" loading={loading} text="Sign In" />
 
             <p className="text-center text-xs font-medium">
               <span className="text-secondary">Belum punya akun? </span>
